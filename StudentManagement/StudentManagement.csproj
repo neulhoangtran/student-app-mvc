@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\Images\" />
+    <Folder Include="Assets\Video\" />
+    <Folder Include="Controller\Student\" />
+    <Folder Include="Controller\Role\" />
+    <Folder Include="Controller\User\" />
+    <Folder Include="Model\Student\" />
+    <Folder Include="Model\Role\" />
+    <Folder Include="View\Role\" />
+    <Folder Include="View\Student\" />
+    <Folder Include="View\User\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="23.5.1" />
+  </ItemGroup>
+
+</Project>
