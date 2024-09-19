@@ -84,6 +84,7 @@
             Controls.Add(panel_txt_welcome);
             Name = "Init";
             Text = "Init";
+            Load += Init_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxStart).EndInit();
             ResumeLayout(false);
         }

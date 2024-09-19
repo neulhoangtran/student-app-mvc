@@ -30,7 +30,7 @@
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Failed to write log: {ex.Message}");
+                Console.WriteLine($"Failed to * log: {ex.Message}");
             }
         }
 

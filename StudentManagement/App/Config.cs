@@ -12,5 +12,6 @@ namespace StudentManagement.App
         public static string DBName;
         public static string DBUser;
         public static string DBPassword;
+        public static bool Debug;
     }
 }

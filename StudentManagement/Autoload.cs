@@ -12,13 +12,14 @@ namespace StudentManagement
         private OracleConnection _conn;
         private bool EnvCheck = false;
         public Autoload() {
+            LoadConfig();
             //InitialSetup();
-            if (EnvFunc.ConfigFileExists())
+            if (!EnvFunc.ConfigFileExists())
             {
                 InitialSetup();
             }
 
-            if (EnvFunc.CheckEnvRequireValue())
+            if (!EnvFunc.CheckEnvRequireValue())
             {
                 InitialSetup();
             }
@@ -31,6 +32,7 @@ namespace StudentManagement
             //}
         }
         public void InitialSetup() {
+            
             Application.Run(new Init());
         }
         public void Run() {
@@ -38,8 +40,18 @@ namespace StudentManagement
         }
         public void InitialConnectDatabase() { }
 
+
         public void LoadConfig()
         {
+            
+            string Debug = Environment.GetEnvironmentVariable("DEBUG") ?? string.Empty;
+            bool debugValue;
+
+            if (!bool.TryParse(Debug, out debugValue))
+            {
+                debugValue = false; // Mặc định là false nếu không chuyển đổi được
+            }
+            Config.Debug = debugValue;
             Config.DBHost = Environment.GetEnvironmentVariable("DB_HOST");
             Config.DBName = Environment.GetEnvironmentVariable("DB_DATABASE");
             Config.DBUser = Environment.GetEnvironmentVariable("DB_USER");

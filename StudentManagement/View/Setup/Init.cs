@@ -379,5 +379,9 @@ namespace StudentManagement.View.Setup
             this.Controls.Add(btnNextSetupModule);
         }
 
+        private void Init_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
