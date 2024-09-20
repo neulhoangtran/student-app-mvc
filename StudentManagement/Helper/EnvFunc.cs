@@ -11,6 +11,20 @@ namespace StudentManagement.Helper
             return AppDomain.CurrentDomain.BaseDirectory;
         }
 
+        public static bool ValidateEnvOnInstallScreen()
+        {
+            if (!ConfigFileExists())
+            {
+                return false;
+            }
+
+            if (!CheckEnvRequireValue())
+            {
+                return false;
+            }
+            return true;
+        }
+
         public static void LoadEnv()
         {
             // Nạp biến môi trường từ file .env với đường dẫn cụ thể

@@ -14,15 +14,11 @@ namespace StudentManagement
         public Autoload() {
             LoadConfig();
             //InitialSetup();
-            if (!EnvFunc.ConfigFileExists())
+            if (!EnvFunc.ValidateEnvOnInstallScreen())
             {
                 InitialSetup();
             }
 
-            if (!EnvFunc.CheckEnvRequireValue())
-            {
-                InitialSetup();
-            }
 
             //check connection
 
